@@ -3,13 +3,6 @@ import './App.css';
 import MovieCard from './MovieCard';
 import SearchIcon from'./search.svg';
 const API_URL = 'http://www.omdbapi.com?apikey=510ee7a6';
-// const movie1 = {
-//     Poster: "N/A",
-//     Title: "Amazing Spiderman Syndrome",
-//     Type: "movie",
-//     Year: "2012",
-//     imdbID: "tt2586634"
-// }
 const App = () => {
 
     const [movies, setMovies] = useState([]);
@@ -23,7 +16,7 @@ const App = () => {
     useEffect(
         () => {
             searchMovies({searchTerm})
-    }, []);
+    }, [searchTerm]);
     return (
         <div className='app'>
             <h1>MovieLand</h1> 
